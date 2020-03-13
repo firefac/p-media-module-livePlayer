@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/firefac/livePlayer2/livePlayer",
+    "pages/firefac/livePlayer/livePlayer"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "直播模块",
+    "enablePullDownRefresh": true,
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "custom": false,
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#AB956D",
+    "color": "#666",
+    "list": [
+      {
+        "pagePath": "pages/firefac/livePlayer/livePlayer",
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home@selected.png",
+        "text": "直播样式1"
+      },
+      {
+        "pagePath": "pages/firefac/livePlayer2/livePlayer",
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home@selected.png",
+        "text": "直播样式2"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "live-player-plugin": {
+      "version": "1.0.2",
+      "provider": "wx2b03c6e691cd7370"
+    }
+  }
+
+}

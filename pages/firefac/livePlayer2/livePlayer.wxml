@@ -1,0 +1,45 @@
+<wxs module="dateUtil" src="../utils/timeUtil.wxs"></wxs>
+
+<view class="container">
+  <view class="noContent" wx:if="{{rooms.length == 0}}">
+    <van-icon name="bullhorn-o" size="120rpx" />
+    <view>没有更多直播啦～～</view>
+  </view>
+  <view class="live-container">
+    <navigator url="plugin-private://wx2b03c6e691cd7370/pages/live-player-plugin?room_id={{item.roomid}}" class="item" wx:for="{{rooms}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+      <view class="img-container">
+        <image class="img" src="{{item.anchorImg}}" mode="aspectFill"></image>
+        <text class="desc" style="width: {{item.liveStatus == 102 ? 325 : 200}}rpx;">{{item.liveStatus == 102 ? dateUtil.dateFormat(item.startTime, 'MM月dd日hh:mm') + '开播' : liveStatus[item.liveStatus]}}</text>
+        <view class="label" style="background-color: #{{item.liveStatus == 102 ? '669933' : '333333'}};">
+          <van-icon name="live" size="30rpx" color="#fff"/>
+        </view>
+        <text class="top">置顶</text>
+      </view>
+      <view class="bottom">
+        <view class="text">
+          <text class="name">{{item.name}}</text>
+          <text wx:if="{{item.anchorName != ''}}" class="desc">主播：{{item.anchorName}}</text>
+        </view>
+        <view class="product-list">
+          <view class="product">
+            <image class="img" src="http://mmbiz.qpic.cn/mmbiz_jpg/C00oibZpp8ADfEoGxqqnQQlIxww2ekk7kVC4ZNKXiaC7YwsZZ5ibl1sBFdk5CzmYC6iabpBvC5ZEfvlj6A6qwBR1og/0?wx_fmt" mode="aspectFill"/>
+            <view class="label">¥100</view>
+          </view>
+          <view class="product">
+            <image class="img" src="http://mmbiz.qpic.cn/mmbiz_jpg/C00oibZpp8ADfEoGxqqnQQlIxww2ekk7kVC4ZNKXiaC7YwsZZ5ibl1sBFdk5CzmYC6iabpBvC5ZEfvlj6A6qwBR1og/0?wx_fmt" mode="aspectFill"/>
+            <view class="label"><text >2</text>商品</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <van-popup show="{{ historyShow }}" bind:close="onClose">
+    <video src="{{liveHistoryRoom.mediaUrl}}"></video>
+  </van-popup>
+
+  <!-- 联系客服 -->
+  <view class="contact">
+    <contact-button style="opacity:0;position:absolute;" type="default-dark" session-from="weapp" size="27">
+    </contact-button>
+  </view>
+</view>
