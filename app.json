@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/firefac/livePlayer2/livePlayer",
-    "pages/firefac/livePlayer/livePlayer"
+    "pages/firefac/livePlayer/livePlayer",
+    "pages/firefac/livePlayer2/livePlayer"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FFFFFF",

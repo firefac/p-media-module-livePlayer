@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "直播演示1",
+  "navigationStyle": "default",
   "usingComponents": {
     "van-tab": "../lib/tab/index",
     "van-tabs": "../lib/tabs/index",

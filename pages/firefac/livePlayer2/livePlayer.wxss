@@ -115,7 +115,7 @@ view, text {
   width: 300rpx;
   height: 200rpx;
   display: flex;
-  padding: 40rpx 10rpx;
+  padding: 20rpx 10rpx;
 }
 
 .live-container .bottom .product{
