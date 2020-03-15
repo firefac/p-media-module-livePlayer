@@ -40,8 +40,8 @@ Page({
     let that = this;
     util.request(api.LiveRoomList, {
         sort: "desc",
-        pageNum: this.pageNum,
-        pageSize: this.pageSize
+        pageNum: this.data.pageNum,
+        pageSize: this.data.pageSize
       }, "POST")
       .then(function(res) {
         if (res.errcode === '0') {
@@ -116,7 +116,9 @@ Page({
       });
       return false;
     }else{
-      this.data.pageNum = this.data.pageNum + 1
+      this.setData({
+        pageNum: this.data.pageNum + 1
+      })
       this.getRoomsList();
     }
   },

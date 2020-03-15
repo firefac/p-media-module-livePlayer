@@ -51,8 +51,8 @@ Page({
     util.request(api.LiveRoomList, {
         statusList: [101, 102, 105, 106],
         sort: "asc",
-        pageNum: this.pageNum,
-        pageSize: this.pageSize
+        pageNum: this.data.pageNum,
+        pageSize: this.data.pageSize
       }, "POST")
       .then(function(res) {
         if (res.errcode === '0') {
@@ -108,8 +108,8 @@ Page({
     let that = this;
     util.request(api.LiveRoomList, {
         statusList: [103, 104, 107],
-        pageNum: this.pageNum,
-        pageSize: this.pageSize
+        pageNum: this.data.finishedPageNum,
+        pageSize: this.data.finishedPageSize
       }, "POST")
       .then(function(res) {
         if (res.errcode === '0') {
@@ -148,7 +148,9 @@ Page({
         });
         return false;
       }else{
-        this.data.pageNum = this.data.pageNum + 1
+        this.setData({
+          pageNum: this.data.pageNum + 1
+        })
         this.getRoomsList();
       }
     }else if(this.data.tabIndex == 1){
@@ -160,7 +162,9 @@ Page({
         });
         return false;
       }else{
-        this.data.finishedPageNum = this.data.finishedageNum + 1
+        this.setData({
+          finishedPageNum: this.data.finishedPageNum + 1
+        })
         this.getFinishedRoomsList();
       }
     }
