@@ -42,7 +42,7 @@
   "sitemapLocation": "sitemap.json",
   "plugins": {
     "live-player-plugin": {
-      "version": "1.0.2",
+      "version": "1.0.3",
       "provider": "wx2b03c6e691cd7370"
     }
   }

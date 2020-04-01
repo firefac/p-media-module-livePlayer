@@ -36,6 +36,13 @@ Page({
     wx.hideNavigationBarLoading() //完成停止加载
     wx.stopPullDownRefresh() //停止下拉刷新
   },
+  // 页面分享
+  onShareAppMessage: function() {
+    return {
+      title: '直播分享',
+      path: '/pages/firefac/livePlayer/livePlayer'
+    }
+  },
   resetData: function() {
     this.setData({
       rooms:[],
