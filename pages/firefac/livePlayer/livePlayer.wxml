@@ -51,7 +51,7 @@
     </van-tab>
   </van-tabs>
   <van-popup show="{{ historyShow }}" bind:close="onClose">
-    <video src="{{liveHistoryRoom.mediaUrl}}"></video>
+    <video class="video" src="{{liveHistoryRoom.mediaUrl}}"></video>
   </van-popup>
 
   <!-- 联系客服 -->

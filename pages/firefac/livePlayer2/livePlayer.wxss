@@ -192,3 +192,8 @@ view, text {
   background: url("https://firefac-1259431066.picsh.myqcloud.com/5ufjlp0rw68jen3pctjha6kk6jl6v4x9.png") no-repeat center 21rpx;
   background-size: 55rpx auto;
 }
+
+.video {
+  width: 600rpx;
+  height: 450rpx;
+}
