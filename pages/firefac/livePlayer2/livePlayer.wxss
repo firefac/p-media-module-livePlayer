@@ -111,6 +111,11 @@ view, text {
   overflow: hidden;
 }
 
+.live-container .bottom .opration{
+  padding-top: 50rpx;
+  text-align: center;
+}
+
 .live-container .bottom .product-list{
   width: 300rpx;
   height: 200rpx;
