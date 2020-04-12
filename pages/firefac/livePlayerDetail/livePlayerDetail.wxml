@@ -40,11 +40,11 @@
     bind:close="onSharePopupClose">
     <view class='share-pop share-info'>
       <button class="sharebtn" open-type="share">
-        <image class='sharebtn_image' src='/static/images/wechat.png'></image>
+        <image class='sharebtn_image' src='/pages/firefac/images/wechat.png'></image>
         <view class='sharebtn_text'>分享给好友</view>
       </button>
       <button class="savesharebtn" bindtap="genSharePoster">
-        <image class='sharebtn_image' src='/static/images/friend.png'></image>
+        <image class='sharebtn_image' src='/pages/firefac/images/friend.png'></image>
         <view class='sharebtn_text'>生成海报</view>
       </button>
     </view>

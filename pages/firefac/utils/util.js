@@ -30,7 +30,7 @@ function request(url, data = {}, method = "GET") {
       method: method,
       header: {
         'Content-Type': 'application/json',
-        'X-TOKEN': wx.getStorageSync('token')
+        'X-TOKEN': wx.getStorageSync('firefac-token')
       },
       success: function(res) {
 
@@ -39,14 +39,14 @@ function request(url, data = {}, method = "GET") {
           if (res.data.errcode == "40001" || res.data.errcode == "40002") {
             // 清除登录相关内容
             try {
-              wx.removeStorageSync('userInfo');
-              wx.removeStorageSync('token');
+              wx.removeStorageSync('firefac-userInfo');
+              wx.removeStorageSync('firefac-token');
             } catch (e) {
               // Do something when catch error
             }
             // 切换到登录页面
             wx.navigateTo({
-              url: '/pages/auth/login/login'
+              url: '/pages/firefac/auth/login/login'
             });
           } else {
             resolve(res.data);
@@ -81,7 +81,7 @@ function redirect(url) {
 function showErrorToast(msg) {
   wx.showToast({
     title: msg,
-    image: '/static/images/icon_error.png'
+    image: '/pages/firefac/images/icon_error.png'
   })
 }
 

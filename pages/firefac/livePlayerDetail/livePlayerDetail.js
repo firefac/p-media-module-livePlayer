@@ -122,7 +122,7 @@ Page({
       if (res.errcode === '0') {
         if(res.data == null){
           wx.showToast({
-            image: '/static/images/icon_error.png',
+            image: '/pages/firefac/images/icon_error.png',
             title: '直播间不存在'
           });
           return
