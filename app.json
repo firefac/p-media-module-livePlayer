@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/firefac/livePlayer/livePlayer",
-    "pages/firefac/livePlayer2/livePlayer"
+    "pages/firefac/livePlayer2/livePlayer",
+    "pages/firefac/livePlayer3/livePlayer",
+    "pages/firefac/livePlayerDetail/livePlayerDetail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FFFFFF",
@@ -29,6 +31,12 @@
         "iconPath": "static/images/home.png",
         "selectedIconPath": "static/images/home@selected.png",
         "text": "直播样式2"
+      },
+      {
+        "pagePath": "pages/firefac/livePlayer3/livePlayer",
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home@selected.png",
+        "text": "直播样式3"
       }
     ]
   },

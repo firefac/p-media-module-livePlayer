@@ -48,7 +48,7 @@
 				{
 					"id": -1,
 					"name": "直播",
-					"pathName": "pages/tools/livePlayer/livePlayer",
+					"pathName": "pages/firefac/livePlayer/livePlayer",
 					"query": ""
 				},
 				{

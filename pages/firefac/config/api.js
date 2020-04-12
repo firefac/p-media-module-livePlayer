@@ -6,5 +6,7 @@ var WxApiRoot = 'https://test-0j2wkomi3jpe.firefac.cn/openapi/'
 
 module.exports = {
   LiveRoomList: WxApiRoot + 'live/list', //直播房间列表
+  LiveRoomDetail: WxApiRoot + 'live/detail', //直播房间详情
   LiveRoomStatusUpdate: WxApiRoot + 'live/status/update', //直播房间列表
+  StorageGeneralLivePoster: WxApiRoot + 'storage/general/live/poster', //生成海报,
 };
